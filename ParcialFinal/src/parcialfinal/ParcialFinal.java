@@ -4,17 +4,26 @@
  */
 package parcialfinal;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+
 /**
  *
  * @author jcrom
  */
 public class ParcialFinal {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    LocalDate date;
+    LocalDateTime ldt = LocalDateTime.now();
+    private int day = ldt.getDayOfMonth();
+    private int month = Integer.parseInt(String.valueOf(ldt.getMonth()));
+    private int year = ldt.getYear();
+    int hora = ldt.getHour();
+    int minute = ldt.getMinute();
+    int seconds = ldt.getSecond();
+    
+    final String fecha = day + "/" + month + "/" + year;
+    final String time = hora + ":" + minute + ":" + seconds;
+   
     
 }
